@@ -5,8 +5,6 @@ class Line < ActiveRecord::Base
   validates :content, presence: true
 
   def self.random
-    last = Line.count
-    random = (1...last).to_a.sample
-    Line.find(random)
+    last = Line.all.sample
   end
 end
