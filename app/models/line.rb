@@ -5,6 +5,6 @@ class Line < ActiveRecord::Base
   validates :content, presence: true
 
   def self.random
-    last = Line.all.sample
+    Line.all.sample
   end
 end

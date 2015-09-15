@@ -7,6 +7,6 @@ class Poem < ActiveRecord::Base
     self.lines.each do |line|
       final_poem << "#{line.content} \n"
     end
-    final_poem_data = { title: self.title, body: final_poem }
+    final_poem
   end
 end
