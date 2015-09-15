@@ -1,5 +1,7 @@
 <h1>Surrealist Poetry Generator</h1>
 
-<h2><%= poem.title %></h2>
-<h3><%= poem.id %></h3>
-<p><%= poem.generate_poem_body %></p>
+<% @poems.each do |poem| %>
+  <h2><%= poem.title %></h2>
+  <h3><%= poem.id %></h3>
+  <pre><%= poem.generate_poem_body %></pre>
+<% end %>

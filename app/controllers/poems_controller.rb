@@ -1,6 +1,10 @@
 class PoemsController < ApplicationController
+
+  def index
+    @poems = Poem.all
+  end
+
   def show
-    poem = Poem.all.sample
-    @poem_data = poem.generate_poem_body
+    @poem = Poem.find(params[:id])
   end
 end
