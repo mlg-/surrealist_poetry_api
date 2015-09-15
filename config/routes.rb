@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
       resources :poems, only: [:index]
 
-      get '/poems/random', to: 'poems#show'
+      get '/poems/random', to: 'poems#random'
     end
   end
 end
