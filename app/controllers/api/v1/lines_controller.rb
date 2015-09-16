@@ -8,8 +8,8 @@ module API
       end
 
       def random 
-        line = Line.all.sample
-        render json: line
+        @line = Line.all.sample
+        render json: @line
       end
     end
   end
