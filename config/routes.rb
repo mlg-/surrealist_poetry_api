@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-
   resources :poems, only: [:index, :show]
 
   namespace :api do
@@ -11,5 +10,4 @@ Rails.application.routes.draw do
       get '/lines/all/random', to: 'lines#random'
     end
   end
-
 end
